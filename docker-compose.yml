@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  web:
+    image: 5b1f7d91801b
+    ports:
+      - 85:80
+    expose:
+      - 3306
+    volumes:
+      - .:/var/www/html
+
+networks:
+  dev:
+    driver: bridge
